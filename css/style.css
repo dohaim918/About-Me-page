@@ -1,0 +1,27 @@
+.primary,
+.deco-line {
+  color: #024a3e;
+}
+.secondary {
+  color: #062923;
+}
+.tertiary {
+  color: #35c787;
+}
+.muted {
+  color: rgba(2, 75, 62, 0.4);
+}
+.accent {
+  color: #48c2a6;
+}
+.sentence {
+  color: #3f3f3f;
+}
+.point {
+  color: white;
+  background-color: #35c787;
+}
+.footer {
+  color: white;
+  background-color: #6ddfb9;
+}
