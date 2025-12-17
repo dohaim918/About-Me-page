@@ -1,0 +1,247 @@
+@media screen and (max-width: 848px) {
+  #home,
+  #intro,
+  #contact,
+  #skills {
+    scroll-margin-top: 180px;
+  }
+
+  /* 컨텐츠 사이 간격 */
+  .info-wrap,
+  .skill-wrap,
+  .activity-wrap {
+    gap: 120px;
+  }
+  /* 꾸밈 요소 - 프로필 */
+
+  .pf-img::before {
+    top: -14px;
+    right: 8px;
+    width: 100%;
+    height: 100%;
+    transform-origin: 70% 10%;
+  }
+  .pf-img::after {
+    right: 0;
+    transform-origin: 22% 73%;
+  }
+
+  /* 꾸밈 요소 - 배경 */
+  .profile-wrap::before {
+    bottom: 340px;
+    left: -470px;
+  }
+  .profile-wrap::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    right: -440px;
+    top: 33%;
+    width: 900px;
+    height: 900px;
+    z-index: -2;
+
+    background: url("../image/bg-03.png") no-repeat;
+    background-size: 100% auto;
+
+    animation: rotateBg 10s linear infinite;
+  }
+
+  /* 뒷 배경 크기 */
+  .tool-skills-inner::after {
+    bottom: -36px;
+    left: -44px;
+    width: 98vw;
+    max-width: 448px;
+  }
+  .blur::before {
+    inset: -36px -45px;
+    background: hsla(168, 100%, 98%, 0.4);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    z-index: -1;
+  }
+  .hobby-inner::before,
+  .content-inner::before {
+    content: "";
+    position: absolute;
+    inset: -36px -45px;
+    background: hsla(168, 100%, 98%, 0.4);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    z-index: -1;
+  }
+
+  /* 중앙절렬 */
+  .pf-intro-inner {
+    align-items: center;
+  }
+  .pf-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pf-desc-wrap {
+    text-align: center;
+  }
+  .content-inner,
+  .education-inner,
+  .tool-skills-inner,
+  .license-inner,
+  .hobby-inner,
+  .experience-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-list,
+  .license-list,
+  .hobby-list {
+    width: 100%;
+  }
+  /* 제목 데코 */
+  .license-inner::after {
+    left: 60px;
+  }
+
+  /* 푸터 패딩 */
+  .ft-tagline {
+    padding: 0 40px;
+  }
+
+  /* 상단 별 3개 패딩추가 */
+  .hero-meta-wrap > span {
+    padding: 0 16px;
+  }
+}
+
+@media screen and (max-width: 524px) {
+  /* tool 스킬 */
+  .skill-item,
+  .profile-wrap {
+    font-size: 14px;
+  }
+  .skill-item {
+    padding: 3px 14px;
+    border: 1px solid;
+  }
+  .tool-list {
+    gap: 8px;
+  }
+
+  .deco-line {
+    font-size: 26px;
+    margin-bottom: 48px;
+  }
+  .deco-line::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    top: calc(100% + 6px);
+  }
+  .deco-line::after {
+    font-size: 26px;
+    top: 12px;
+  }
+
+  .hero-title-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 106px 0 24px 0;
+  }
+
+  .pf-position {
+    font-size: 26px;
+  }
+
+  .pf-name {
+    width: 316px;
+  }
+
+  .hero-title {
+    padding-left: 30px;
+  }
+
+  .pf-img {
+    padding: 0 20px;
+  }
+
+  .pf-img > img {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .pf-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pf-name > svg {
+    width: 93%;
+  }
+
+  /* 여백변경 */
+  .profile-wrap {
+    padding: 100px 23px;
+  }
+
+  /* 고정값 변경 */
+  .profile {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    column-gap: 24px;
+    row-gap: 60px;
+  }
+
+  .pf-intro-inner {
+    max-width: 300px;
+  }
+  /* 폰트 */
+  .footer,
+  .hero-meta-wrap,
+  .link-item,
+  .visual {
+    font-size: 12px;
+  }
+  .pf-desc-wrap {
+    font-size: 14px;
+  }
+  .content-inner,
+  .education-inner,
+  .tool-skills-inner,
+  .license-inner,
+  .hobby-inner,
+  .experience-inner {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .none {
+    display: none;
+  }
+
+  .hero-meta-wrap svg {
+    width: 68px;
+    height: 31px;
+  }
+
+  .profile-wrap::before,
+  .profile-wrap::after {
+    width: 800px;
+    height: 800px;
+  }
+
+  .profile-wrap::after {
+    top: 26%;
+  }
+
+  .tool-skills-inner::after {
+    inset: -36px -45px;
+    background: hsla(168, 19%, 74%, 0.4);
+    backdrop-filter: blur(20px);
+    width: 130%;
+  }
+}
