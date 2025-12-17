@@ -1,5 +1,17 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#home,
+#intro,
+#contact,
+#skills {
+  scroll-margin-top: 120px;
+}
+
 /* 폰트 색상 */
 .primary,
+.footer,
 .deco-line {
   color: #024a3e;
 }
@@ -22,24 +34,33 @@
   color: white;
   background-color: #35c787;
 }
-.footer {
+/* .footer {
   color: white;
   background-color: #6ddfb9;
-}
+} */
 .wrap-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-body,
-.nav {
+
+/* 배경색 */
+body {
   background-color: #f5fffd;
+}
+.nav {
+  background: hsla(168, 100%, 98%, 0.4);
+  backdrop-filter: blur(20px);
+}
+
+.wrap-container {
+  overflow: hidden;
 }
 
 .header,
 .profile-wrap {
-  /* position: relative; */
+  position: relative;
   width: 100%;
   max-width: 1120px;
   display: flex;
@@ -91,6 +112,7 @@ body,
 }
 
 .hero-meta-wrap {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -102,17 +124,25 @@ body,
 
 /* 메인 페이지 */
 .profile-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* row-gap: 120px; */
-  /* grid-template-rows: 523px; */
-  padding: 170px 70px;
-  /* margin-top: 100px; */
+  /* padding: 170px 70px; */
+  /* 하... 패딩 24 넣고 싶다...... 1픽셀만 어디서 못때오나ㅠㅠㅠㅠ */
+  padding: 170px 23px;
   font-size: 18px;
   font-weight: bold;
-  /* padding: 0 70px; */
 }
 
+.profile {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(382px, 1fr));
+  column-gap: 24px;
+  row-gap: 120px;
+}
+
+.pf-img {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
 .pf-img > img {
   display: block;
   /* max-width: 100%;
@@ -121,13 +151,29 @@ body,
   height: auto;
   border-radius: 200px 200px 5px 5px;
 }
+.pf-img::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  bottom: 4px;
 
-/* 프로필 영역 (콘텐츠) */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 548 528'><path d='M79.5001 412.644L141 408L79.5001 403.356L105.756 372.994L75.1775 399.064L70.5 338L65.8225 399.064L35.2439 372.994L61.4998 403.356L0 408L61.4998 412.644L35.2439 443.006L65.8225 416.936L70.5 478L75.1775 416.936L105.756 443.006L79.5001 412.644Z' fill='%2348C2A6'/><path d='M439.394 82.6419L507 77.5L439.394 72.3581L468.257 38.7433L434.642 67.6062L429.5 0L424.358 67.6062L390.743 38.7433L419.606 72.3581L352 77.5L419.606 82.6419L390.743 116.257L424.358 87.3938L429.5 155L434.642 87.3938L468.257 116.257L439.394 82.6419Z' fill='%2348C2A6'/></svg>");
+  /* background-repeat: no-repeat; */
+}
+
+/* 프로필 영역 */
 .pf-intro {
-  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1.875rem;
+}
+
+.pf-intro-inner {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+
+  max-width: 408px;
   gap: 1.875rem;
 }
 
@@ -162,20 +208,13 @@ body,
   padding: 1.875em 0;
 }
 
-/* 데코 라인 */
-.deco-line {
-  font-size: 2.25rem;
-}
-
-.profile,
+/* 콘텐츠 영역 */
 .info-wrap,
 .skill-wrap,
 .activity-wrap {
-  grid-column: 1 / 3;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(382px, 1fr));
-  column-gap: 24px;
-  row-gap: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 .contents,
@@ -184,9 +223,9 @@ body,
 .license,
 .hobby,
 .experience {
+  flex: 1 1 382px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
 
 .content-inner,
@@ -196,4 +235,292 @@ body,
 .hobby-inner,
 .experience-inner {
   width: 358px;
+}
+
+/* 라이센스 별 */
+.license-inner {
+  position: relative;
+}
+.license-inner::after {
+  content: "";
+  position: absolute;
+  top: -42px;
+  left: -46px;
+  z-index: -1;
+  width: 77px;
+  height: 77px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 77 77'><path opacity='0.5' d='M36.6527 42.7079L38.5 77L40.3473 42.7078L54.9249 54.9249L42.7079 40.3473L77 38.5L42.7079 36.6527L54.9249 22.0751L40.3473 34.2921L38.5 0L36.6527 34.2921L22.0751 22.0751L34.2921 36.6527L0 38.5L34.2921 40.3473L22.0751 54.9249L36.6527 42.7079Z' fill='%2348C2A6'/></svg>");
+}
+
+/* 데코 라인 */
+.deco-line {
+  position: relative;
+  margin-bottom: 64px;
+  font-size: 2.25rem;
+  line-height: 1em;
+  width: max-content;
+}
+.deco-line::before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 8px);
+  width: calc(100% + 10px);
+  /* height: 0.16rem; */
+  height: 2.4px;
+
+  border-radius: 4px;
+  background-image: linear-gradient(to right, #024a3e, #48c2a6);
+}
+.deco-line::after {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: calc(100% - 11px);
+  width: 53px;
+  height: 42px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 42'><path d='M43.248 21.281C21.7353 21.2753 22.6703 24.5881 18.4889 41.7439C18.4046 42.0867 17.8832 42.0867 17.9185 41.7439C19.6593 24.5881 21.7353 21.2753 0.224509 21.2695C-0.132272 21.2695 -0.0362134 20.7199 0.318607 20.7199C21.8313 20.7257 20.8962 17.4129 25.0776 0.257078C25.1619 -0.0856928 25.6834 -0.0856928 25.6481 0.257078C23.9073 17.4129 21.8313 20.7257 43.342 20.7314C43.6988 20.7314 43.6028 21.281 43.248 21.281Z' fill='%2348C2A6'/></svg>")
+    no-repeat;
+}
+
+/* 콘텐츠 */
+/* 콘텐츠 아이콘 */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+/* 콘텐츠 아래 라인 */
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.contact-item::after {
+  content: "";
+  position: absolute;
+  bottom: -18px;
+
+  width: 100%;
+  height: 2px;
+  background-color: #48c2a6;
+}
+
+.git,
+.tel,
+.e-mail {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* 컨텐츠 + 취미 폰트크기 */
+.hobby-list,
+.link-item {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* 스킬 */
+.tool-title {
+  margin-bottom: 60px;
+}
+.tool-list {
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.skill-item {
+  width: fit-content;
+  padding: 8px 20px;
+  border-radius: 30px;
+  border: 2px solid #35c787;
+}
+
+/* 취미 */
+.hobby-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.visual,
+.learning,
+.recharge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+.visual {
+  padding-left: 8px;
+}
+
+/* 앞쪽 블릿 */
+.bullet {
+  position: relative;
+  padding: 0 0 24px 34px;
+}
+.bullet::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'><path d='M15.967 7.98348C10.0522 10.61 10.61 10.0518 7.98348 15C5.35691 10.0518 5.9148 10.61 0 7.98348C5.9148 5.35691 5.35691 5.9148 7.98348 0C10.61 5.9148 10.0522 5.35691 15.967 7.98348Z' fill='%23024A3E'/></svg>");
+}
+
+.experience-item {
+  padding-bottom: 32px;
+}
+.bullet:last-child {
+  padding-bottom: 0;
+}
+
+/* 배경  그라데이션 */
+
+/* 상단 */
+.hero-meta-wrap::after {
+  content: "";
+  position: absolute;
+  left: -420px;
+  top: -200px;
+  /* left: -37%; */
+  /* top: -480%; */
+  /* transform: translate(-400px); */
+
+  width: 1000px;
+  height: 1000px;
+
+  z-index: -1;
+
+  background: url("../image/Profile-bg.png") no-repeat;
+  background-size: 100% auto;
+
+  opacity: 0.8;
+}
+
+/* 중앙 */
+.profile-wrap::before {
+  content: "";
+  position: absolute;
+  right: -48%;
+  /* left: 100%;
+  transform: translatex(-400px); */
+  bottom: 24%;
+  width: 900px;
+  height: 900px;
+
+  z-index: -1;
+
+  background: url("../image/ed&li-bg.png") no-repeat;
+  background-size: 100% auto;
+  /* opacity: 0.8; */
+
+  animation: rotateBg 10s linear infinite;
+}
+
+@keyframes rotateBg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 하단 */
+.footer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  width: auto;
+  height: 1080px;
+
+  background: url("../image/main_bg.png") no-repeat center bottom;
+  background-size: contain;
+  background-position: center;
+  background-size: cover;
+}
+/* .profile-wrap::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  width: 100vw;
+  height: 1000px;
+
+  z-index: -1;
+
+  background: url("../image/gradient-bg.png") no-repeat;
+  background-size: 100% auto;
+  background-position: center bottom;
+  opacity: 90%;
+} */
+
+/* 스킬 뒷 배경 */
+.tool-skills-inner {
+  position: relative;
+}
+.tool-skills-inner::after {
+  content: "";
+  position: absolute;
+  top: -36px;
+  bottom: -12px;
+  width: 48vw;
+  max-width: 428px;
+  /* right: -40px; */
+  left: -35.5px;
+
+  /* width: calc(100% + 80px); */
+  /* transform: translateX(-40px); */
+
+  z-index: -1;
+  background-color: #e4e6de;
+  opacity: 40%;
+  border-radius: 16px;
+}
+
+/* 투명 뒷 배경 */
+.blur {
+  position: relative;
+  z-index: 1;
+}
+
+.blur::before {
+  content: "";
+  position: absolute;
+  inset: -36px -20px;
+  background: hsla(168, 100%, 98%, 0.4);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  z-index: -1;
+}
+
+/* 푸터 */
+.footer {
+  position: relative;
+  width: 100vw;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  /* background-color: rgba(32, 35, 34, 0.05); */
+  background-image: linear-gradient(to top, rgba(32, 35, 34, 0.1), rgba(97, 201, 165, 0.1));
+}
+
+.social-icon {
+  display: flex;
+  gap: 30px;
+}
+.ft-tagline {
+  text-align: center;
 }
