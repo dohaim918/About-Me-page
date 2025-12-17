@@ -108,7 +108,7 @@ body {
   align-items: center;
   margin: 106px 0 4px 0;
   height: 622px;
-  background: url("../image/portfolio_bg.png") no-repeat center;
+  background: url("../assets/image/portfolio_bg.png") no-repeat center;
 }
 
 .logo {
@@ -456,7 +456,7 @@ body {
 
   z-index: -1;
 
-  background: url("../image/bg-01.png") no-repeat;
+  background: url("../assets/image/bg-01.png") no-repeat;
   background-size: 100% auto;
 
   opacity: 0.8;
@@ -475,7 +475,7 @@ body {
 
   z-index: -1;
 
-  background: url("../image/bg-02.png") no-repeat;
+  background: url("../assets/image/bg-02.png") no-repeat;
   background-size: 100% auto;
   /* opacity: 0.8; */
 
@@ -502,7 +502,7 @@ body {
   width: auto;
   height: 1080px;
 
-  background: url("../image/main_bg.png") no-repeat center bottom;
+  background: url("../assets/image/main_bg.png") no-repeat center bottom;
   background-size: contain;
   background-position: center;
   background-size: cover;
