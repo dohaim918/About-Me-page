@@ -6,6 +6,10 @@
     scroll-margin-top: 180px;
   }
 
+  .hero-desc {
+    display: none;
+  }
+
   /* 컨텐츠 사이 간격 */
   .info-wrap,
   .skill-wrap,
@@ -123,8 +127,9 @@
   .profile-wrap {
     font-size: 14px;
   }
-  .skill-item {
-    padding: 3px 14px;
+  .skill-item,
+  .tool-list > .point {
+    padding: 4px 14px;
     border: 1px solid;
   }
   .tool-list {
@@ -263,6 +268,18 @@
 @media screen and (max-width: 430px) {
   .nav-list {
     font-size: 16px;
+    gap: 42px;
+  }
+  .pf-name {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .nav-list {
     gap: 24px;
+  }
+  .pf-name {
+    width: 280px;
   }
 }

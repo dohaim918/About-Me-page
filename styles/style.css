@@ -32,6 +32,7 @@ html {
 }
 .point {
   color: white;
+  border-color: #35c787;
   background-color: #35c787;
 }
 /* .footer {
@@ -117,12 +118,39 @@ body {
   max-width: 596px;
 }
 
+.hero-desc {
+  padding-right: 30px;
+  position: relative;
+}
+.hero-desc::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 16px;
+  top: 1.5px;
+  right: 15px;
+  background-color: rgba(2, 75, 62, 0.4);
+}
+.hero-date {
+  position: relative;
+  padding-left: 30px;
+}
+.hero-date::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 16px;
+  top: 1.5px;
+  left: 15px;
+  background-color: rgba(2, 75, 62, 0.4);
+}
 .hero-meta-wrap {
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  transition: font-size 0.4s;
 
   /* padding-bottom: 70px; */
   text-align: center;
@@ -134,6 +162,7 @@ body {
   padding: 170px 23px;
   font-size: 18px;
   font-weight: bold;
+  transition: padding 0.4s;
 }
 
 .profile {
@@ -244,6 +273,8 @@ body {
   width: fit-content;
   padding-top: 0.5em;
   position: relative;
+
+  transition: width 0.3s;
 }
 .pf-name::after {
   width: 104%;
@@ -392,7 +423,8 @@ body {
   gap: 10px;
   justify-content: center;
 }
-.skill-item {
+.skill-item,
+.tool-list > .point {
   width: fit-content;
   padding: 8px 20px;
   border-radius: 30px;
@@ -584,4 +616,38 @@ body {
 }
 .ft-tagline {
   text-align: center;
+}
+
+/* 그라데이션  */
+.skill-item {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  border-radius: 100px;
+  background: linear-gradient(120deg, #48c2a6, #58ce9b, #f0ffce);
+
+  transform: translateX(-100%);
+  transition: all 0.45s ease;
+  z-index: -1;
+  opacity: 0;
+}
+
+.skill-item:hover::before {
+  transform: translateX(0);
+  opacity: 1;
+}
+.skill-item:hover {
+  color: #fff;
+  border-color: #35c787;
+}
+
+.skill-item {
+  z-index: 1;
 }
