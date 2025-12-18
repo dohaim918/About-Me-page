@@ -1,4 +1,4 @@
-<img width="1856" height="3211" alt="image" src="https://github.com/user-attachments/assets/9952265e-6c31-430b-955f-be5662de3f98" /># 🎨 Design-to-Code: Intuitive Self-Introduction Web
+
 > **"디자인의 의도를 이해하고, 견고한 구조로 구현하는 프런트엔드 개발자 김도하입니다."**
 
 본 프로젝트는 단순한 자기소개 페이지를 넘어, **디자인 가이드라인을 실제 웹 환경에서 어떻게 가장 효율적으로 구현할 것인가**에 대한 고민을 담은 프로젝트입니다. 시각적 균형과 코드의 구조적 안정성을 동시에 확보하는 데 집중했습니다.
