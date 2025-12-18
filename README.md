@@ -104,7 +104,7 @@
 
 <br>
 
-![footer](https://capsule-render.vercel.app/api?type=waving&color=F9FFCE&height=118&section=footer&animation=fadeIn)
+![footer](https://capsule-render.vercel.app/api?type=waving&color=FFFA70&height=118&section=footer&animation=fadeIn)
 
 </div>
 
