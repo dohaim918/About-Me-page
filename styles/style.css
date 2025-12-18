@@ -663,3 +663,7 @@ body {
   text-shadow: 0 0 6px rgba(53, 199, 135, 0.6), 0 0 12px rgba(53, 199, 135, 0.4), 0 0 20px rgba(53, 199, 135, 0.3),
     0 0 48px rgba(53, 199, 135, 0.2);
 }
+
+.nav-list > li {
+  padding-bottom: 22px;
+}
