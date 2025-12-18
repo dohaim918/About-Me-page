@@ -130,7 +130,7 @@
   .skill-item,
   .tool-list > .point {
     padding: 4px 14px;
-    border: 1px solid;
+    border: 1.5px solid #35c787;
   }
   .tool-list {
     gap: 8px;
@@ -245,7 +245,7 @@
 
   .tool-skills-inner::after {
     inset: -36px -45px;
-    background: hsla(168, 19%, 74%, 0.4);
+    background: hsla(168, 13%, 40%, 0.4);
     backdrop-filter: blur(20px);
     width: 130%;
   }
@@ -262,6 +262,10 @@
 
   .nav-list {
     transition: all 0.4s;
+  }
+
+  .license-inner::after {
+    left: 55px;
   }
 }
 
@@ -281,5 +285,8 @@
   }
   .pf-name {
     width: 280px;
+  }
+  .license-inner::after {
+    left: 41px;
   }
 }

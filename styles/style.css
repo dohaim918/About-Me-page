@@ -342,6 +342,8 @@ body {
   width: 77px;
   height: 77px;
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 77 77'><path opacity='0.5' d='M36.6527 42.7079L38.5 77L40.3473 42.7078L54.9249 54.9249L42.7079 40.3473L77 38.5L42.7079 36.6527L54.9249 22.0751L40.3473 34.2921L38.5 0L36.6527 34.2921L22.0751 22.0751L34.2921 36.6527L0 38.5L34.2921 40.3473L22.0751 54.9249L36.6527 42.7079Z' fill='%2348C2A6'/></svg>");
+
+  transition: left 0.3s ease;
 }
 
 /* 데코 라인 */
@@ -650,4 +652,14 @@ body {
 
 .skill-item {
   z-index: 1;
+}
+
+/* 호버 */
+.nav-list > li [href^="#"]:hover {
+  color: #35c787;
+
+  color: #ffffff;
+
+  text-shadow: 0 0 6px rgba(53, 199, 135, 0.6), 0 0 12px rgba(53, 199, 135, 0.4), 0 0 20px rgba(53, 199, 135, 0.3),
+    0 0 48px rgba(53, 199, 135, 0.2);
 }
