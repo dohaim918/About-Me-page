@@ -102,13 +102,13 @@
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=flat-square&logo=Gmail&logoColor=white)](mailto:nzqaws1121@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white)](https://github.com/kimdoha)
 
+<br>
 
+![footer](https://capsule-render.vercel.app/api?type=waving&color=58FFD9&height=118&section=footer&animation=fadeIn)
 
 </div>
 
 
 
 
-<br>
 
-![footer](https://capsule-render.vercel.app/api?type=waving&color=48C2A6&height=118&section=footer&animation=fadeIn)
