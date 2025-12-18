@@ -1,10 +1,10 @@
-# 🎨 Design-to-Code: Intuitive Self-Introduction Web
+<img width="1856" height="3211" alt="image" src="https://github.com/user-attachments/assets/9952265e-6c31-430b-955f-be5662de3f98" /># 🎨 Design-to-Code: Intuitive Self-Introduction Web
 > **"디자인의 의도를 이해하고, 견고한 구조로 구현하는 프런트엔드 개발자 김도하입니다."**
 
 본 프로젝트는 단순한 자기소개 페이지를 넘어, **디자인 가이드라인을 실제 웹 환경에서 어떻게 가장 효율적으로 구현할 것인가**에 대한 고민을 담은 프로젝트입니다. 시각적 균형과 코드의 구조적 안정성을 동시에 확보하는 데 집중했습니다.
 
 ## 🔗 Project Overview
-- **개발 기간**: 2025.12 (Self-Introduction Web Project)
+- **개발 기간**: 2025.12.12 ~ 12.18
 - **주요 목표**: 
   - 피그마(Figma) 디자인의 100% 구현
   - 유지보수가 용이한 HTML/CSS 구조 설계
@@ -30,7 +30,7 @@
 - **PC-First & Navigation**: 상단 네비게이션을 고정(Fixed)하여 접근성을 높였고, 스크롤에 따라 정보가 자연스럽게 이어지도록 구성했습니다.
 - **Card UI**: 복잡한 정보(Education, Experience 등)를 카드 형태로 모듈화하여 가독성을 극대화했습니다.
 
-### 3. 기술적 최적화: 가볍고 영리한 마크업
+### 3. 기술적 최적화: 시멘틱 구조를 활용한 깔끔한 마크업
 - **Pseudo-elements & SVG**: 단순 꾸밈 요소로 인해 HTML이 복잡해지는 것을 방지하기 위해 가상 요소(`::before`, `::after`)와 배경 이미지 처리를 적극 활용했습니다.
 - **Clean Code**: 장식 요소가 콘텐츠 읽기를 방해하지 않도록 HTML 구조를 단순하게 유지했습니다.
 
@@ -56,7 +56,7 @@
 ---
 
 ## 📸 Screen Shots
-*(여기에 실제 완성된 웹 페이지 캡쳐본이나 GIF를 넣어주세요)*
+<img width="1856" height="3211" alt="image" src="https://github.com/user-attachments/assets/e0ea6686-3fa1-4c25-a84f-f3deb38414e9" />
 
 ---
 Copyright © 2025 Kim Doha. All rights reserved.
