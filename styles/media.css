@@ -208,9 +208,13 @@
   .footer,
   .hero-meta-wrap,
   .link-item,
-  .visual {
+  .hobby-item {
     font-size: 12px;
   }
+  .hobby-item::after {
+    font-size: 12px;
+  }
+
   .pf-desc-wrap {
     font-size: 14px;
   }
@@ -277,6 +281,13 @@
   .pf-name {
     width: 300px;
   }
+
+  .hobby-list {
+    transition: gap 0.4s;
+  }
+  .hobby-item::after {
+    min-width: 120px;
+  }
 }
 
 @media screen and (max-width: 380px) {
@@ -288,5 +299,16 @@
   }
   .license-inner::after {
     left: 41px;
+  }
+
+  .hobby-list {
+    gap: 60px;
+  }
+}
+
+@media (hover: none) {
+  .hobby-item::after,
+  .hobby-item::before {
+    opacity: 1;
   }
 }

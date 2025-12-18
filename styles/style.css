@@ -667,3 +667,80 @@ body {
 .nav-list > li {
   padding-bottom: 22px;
 }
+
+.hobby-list {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.hobby-item {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hobby-list {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.hobby-item {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hobby-item::after {
+  content: attr(data-tooltip);
+
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+
+  padding: 12px 16px;
+  min-width: 160px;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(6px);
+
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(2, 75, 62, 0.1);
+
+  font-size: 14px;
+  color: #024a3e;
+  white-space: normal;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* .hobby-item::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 12px;
+  height: 12px;
+
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 30px rgba(2, 75, 62, 0.1);
+  backdrop-filter: blur(6px);
+
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+
+  opacity: 0;
+  transition: all 0.3s ease;
+} */
+
+.hobby-item:hover::after,
+.hobby-item:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
