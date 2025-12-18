@@ -1,7 +1,6 @@
 <div align="center">
 
-![Uploading MacBook Air - 1.png…]()
-
+<img width="1280" height="831" alt="MacBook Air - 1" src="https://github.com/user-attachments/assets/f8cf6d82-ef73-40b6-86cd-a0e7c1e7dd10" />
 
 
 <br/>
