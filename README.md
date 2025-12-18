@@ -108,3 +108,7 @@
 
 
 
+
+<br>
+
+![footer](https://capsule-render.vercel.app/api?type=waving&color=48C2A6&height=118&section=footer&animation=fadeIn)
